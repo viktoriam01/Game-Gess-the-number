@@ -19,16 +19,16 @@ function gessRandomNumner() {
               return
             } 
 
-         if (!isNumber(userNumber)) {
+         if (!isNumber(+userNumber)) {
                alert('Введи число');
                getUserNumber()
-            } else if (userNumber > randomNumber) {
-               alert('Загаданное число больше, введите новое число');
-               getUserNumber()
-            } else if (userNumber < randomNumber) {
+            } else if (+userNumber > randomNumber) {
                alert('Загаданное число меньше, введите новое число');
                getUserNumber()
-            } else if (userNumber = randomNumber) {
+            } else if (+userNumber < randomNumber) {
+               alert('Загаданное число больше, введите новое число');
+               getUserNumber()
+            } else if (+userNumber === randomNumber) {
                alert('Поздравляю! Вы угадали!');
             }
          }
